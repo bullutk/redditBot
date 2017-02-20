@@ -8,7 +8,7 @@ def bot_login():
 				password = config.password,
 				client_id = config.client_id,
 				client_secret = config.client_secret,
-				user_agent = "sokonx's bull comment responder v0.1")
+				user_agent = "soknox's digitalcrafs comment responder v0.1")
 	print "Logged in!!"
 
 	return r
@@ -16,9 +16,9 @@ def bot_login():
 def run_bot(r):
 	print "obtaining comments..."
 	for comment in r.subreddit('test').comments(limit=50):
-		if "Ari" in comment.body:
+		if "DigitalCrafts" in comment.body:
 			print ("string found!!")
-			comment.reply("Ari is the coolest!!")
+			comment.reply("[Click to learn more about DigitalCrafts!!](http://www.digitalcrafts.com/)")
 			print "comment has been posted!"
 
 	print "sleeping for 10 seconds"
